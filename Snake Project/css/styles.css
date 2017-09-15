@@ -1,0 +1,11 @@
+canvas {
+  color: white;
+  background-color: black;
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+}
