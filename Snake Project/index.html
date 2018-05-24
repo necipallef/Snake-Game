@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type='text/javascript'></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <title> Snake Game!</title>
     <canvas id='canvas' width='450' height='450'></canvas>
-  </head>
-  <body>
-    <script src='js/settings.js'></script>
-  </body>
+</head>
+<body>
+<br>
+<div style="text-align:center;width:320px;">
+    <button onmousedown="moveup()">UP</button>
+    <br><br>
+    <button onmousedown="moveleft()">LEFT</button>
+    <button onmousedown="moveright()">RIGHT</button>
+    <br><br>
+    <button onmousedown="movedown()">DOWN</button>
+</div>
+<br>
+
+<script src='js/settings.js'></script>
+<script>
+    function moveup() {
+        move(38); // up arrow
+    }
+
+    function moveleft() {
+        move(37); // left arrow
+    }
+
+    function moveright() {
+        move(39); // right arrow
+    }
+
+    function movedown() {
+        move(40); // down arrow
+    }
+
+    function move(key) {
+        const event = jQuery.Event('keydown');
+        event.which = key; // up arrow
+        $(document).trigger(event);
+    }
+</script>
+</body>
 </html>
